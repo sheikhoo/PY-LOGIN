@@ -1,7 +1,5 @@
 from requests import Session
 from bs4 import BeautifulSoup as bs
-import lxml.html
-from lxml.cssselect import CSSSelector
 
 
 with Session() as s:
@@ -12,15 +10,6 @@ with Session() as s:
 
     login_data = {"password":password}
     s.post(baseUrl+"/pass",login_data)
-    
-    #home_page = s.get(baseUrl+"/sys?submit=Refresh", stream=True)
-
-    #home_page.raw.decode_content = True
-    #tree = lxml.html.parse(home_page.raw)
-    
-    #td_empformbody = CSSSelector('font')
-    # for elem in td_empformbody(tree):
-    #     print(elem.text)
 
     home_page = s.get(baseUrl+"/sys?submit=Refresh", stream=True)
     html=bs(home_page.content, "html.parser")
