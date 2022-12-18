@@ -1,5 +1,5 @@
 # PY-LOGIN
-Login to Micronet switch, get and change setting
+Login to 24 Port Gigabit Ethernet Switch, get and change setting
 
 ## Installation
 
