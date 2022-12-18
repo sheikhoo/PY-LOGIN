@@ -1,4 +1,5 @@
 # PY-LOGIN
+Login to Micronet switch, get and change setting
 
 ## Installation
 
